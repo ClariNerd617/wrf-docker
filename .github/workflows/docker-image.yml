@@ -15,4 +15,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile-wrf_wps --tag WRF_PWS:$(date +%s)
+    # I was getting errors when I used a CAPSLOCK tag, so I went with lowercase instead.
+      run: docker build . --file Dockerfile-wrf_wps --tag wrf_wps:$(date +%s)
